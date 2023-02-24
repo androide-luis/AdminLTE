@@ -43,10 +43,10 @@
                             <td><?= $row['ApPaterno']; ?></td>
                             <td><?= $row['ApMaterno']; ?></td>
                             <td><?= $row['Usuario']; ?></td>
-                            <td><?= $row['email']; ?></td>
-                            <td><?= $row['mobile_no']; ?></td>
+                            <td><?= $row['Email']; ?></td>
+                            <td><?= $row['Telefono']; ?></td>
                             <td><span class="btn btn-primary btn-flat btn-xs"><?= ($row['IdRol'] == 1) ? 'admin' : 'member'; ?><span></td>
-                                        <td class="text-right"><a href="<?= base_url('admin/users/edit/' . $row['idusuario']); ?>" class="btn btn-info btn-flat">Edit</a><a href="<?= base_url('admin/users/del/' . $row['idusuario']); ?>" class="btn btn-danger btn-flat <?= ($row['IdRol'] == 1) ? 'disabled' : '' ?>">Delete</a></td>
+                                        <td class="text-right"><a href="<?= base_url('admin/users/edit/' . $row['IdUsuario']); ?>" class="btn btn-info btn-flat">Edit</a><a href="<?= base_url('admin/users/del/' . $row['IdUsuario']); ?>" class="btn btn-danger btn-flat <?= ($row['IdRol'] == 1) ? 'disabled' : '' ?>">Delete</a></td>
                                         </tr>
                                     <?php endforeach; ?>
                                     </tbody>

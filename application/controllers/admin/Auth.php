@@ -33,10 +33,11 @@ class Auth extends CI_Controller {
                 $result = $this->auth_model->login($data);
                 if ($result == TRUE) {
                     $admin_data = array(
-                        'idusuario' => $result['idusuario'],
+                        'idusuario' => $result['IdUsuario'],
                         'Usuario' => $result['Usuario'],
                         'Nombre' => $result['Nombre'] . ' ' . $result['ApPaterno'],
-                        'IdRol' => $result['IdRol']
+                        'IdRol' => 1
+                        //'IdRol' => $result['IdRol']
                     );
                     $this->session->set_userdata($admin_data);
                     redirect(base_url('admin/dashboard'), 'refresh');

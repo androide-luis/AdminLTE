@@ -71,7 +71,7 @@
 				<!--main content end-->
 				<!--footer start-->
 				<footer class="main-footer">
-					<strong>Copyright © 2020 <a href="#">Te Ayudo</a></strong> Todos los derechos reservados
+					<strong>Copyright © 2020 <a href="#">Cidec</a></strong> Todos los derechos reservados
 					reserved.
 				</footer>
 				<!--footer end-->

@@ -9,13 +9,13 @@ class Users extends MY_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('admin/user_model', 'user_model');
-        $this->load->model('admin/log_model', 'log_model');
+        //$this->load->model('admin/log_model', 'log_model');
     }
 
     public function index() {
         //START: MWS Log
         $idAdmin = $this->session->userdata('idusuario');
-        $this->add_log($idAdmin, "check - controller: Users  func: index()");
+        //$this->add_log($idAdmin, "check - controller: Users  func: index()");
         //END: MWS Log                    
         $data['all_users'] = $this->user_model->get_all_users();
         $data['view'] = 'admin/users/user_list';
@@ -55,7 +55,7 @@ class Users extends MY_Controller {
                 if ($result) {
                     //MWS Log
                     $idAdmin = $this->session->userdata('admin_id');
-                    $this->add_log($idAdmin, "successfully new user - " . $data['username']);
+                    //$this->add_log($idAdmin, "successfully new user - " . $data['username']);
 
                     $this->session->set_flashdata('msg', 'Usuario registrado con éxito!');
                     redirect(base_url('admin/users'));
@@ -110,7 +110,7 @@ class Users extends MY_Controller {
     public function del($id = 0) {
         //MWS Log
         $idAdmin = $this->session->userdata('admin_id');
-        $this->add_log($idAdmin, "successfully deleted user - " . $id);
+        //$this->add_log($idAdmin, "successfully deleted user - " . $id);
         
         $data = array(
             'is_active' => 0,
